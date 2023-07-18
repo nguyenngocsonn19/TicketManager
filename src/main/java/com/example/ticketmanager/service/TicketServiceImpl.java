@@ -11,38 +11,38 @@ import java.util.Optional;
 @Service
 public class TicketServiceImpl implements TicketService{
     private TicketRepository ticketRepository;
+
     @Autowired
     public TicketServiceImpl(TicketRepository theTicketRepository){
         ticketRepository = theTicketRepository;
     }
 
     @Override
-    public List<Ticket> findAll() {
+    public List<Ticket> getAllTicket() {
         return ticketRepository.findAllByOrderByIdAsc();
     }
 
+
     @Override
-    public Ticket findById(int theId) {
+    public Ticket getTicketById(int theId){
         Optional<Ticket> result = ticketRepository.findById(theId);
 
-        Ticket theTicket = null;
-        if(result.isPresent()){
-            theTicket = result.get();
-        }else {
-            throw new RuntimeException("Did not fine ticket id " +theId);
+        if(result.isPresent()) {
+            return result.get();
+        } else {
+            throw new RuntimeException("Did not find ticket id - " + theId);
         }
-        return theTicket;
     }
 
+
     @Override
-    public void save(Ticket theTicket) {
+    public void save(Ticket theTicket){
         ticketRepository.save(theTicket);
     }
 
     @Override
-    public void deleteById(int theId) {
-
+    public void deleteTicket(int theId) {
         ticketRepository.deleteById(theId);
-
     }
+
 }

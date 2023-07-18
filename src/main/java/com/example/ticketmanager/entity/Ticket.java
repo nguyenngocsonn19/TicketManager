@@ -3,7 +3,7 @@ package com.example.ticketmanager.entity;
 import javax.persistence.*;
 
 @Entity
-@Table(name ="ticket")
+@Table(name ="tickets")
 
 public class Ticket {
     @Id
@@ -18,7 +18,7 @@ public class Ticket {
     @Column(name="type")
     public String type;
 
-    @Column(name="details")
+    @Column(name="detail")
     public String details;
 
     public int getId() {
