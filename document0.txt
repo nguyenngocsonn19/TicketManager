@@ -1,0 +1,27 @@
+Bước 1: Thiết kế Ticket Entity
+Bắt đầu bằng việc tạo Ticket Entity với các thuộc tính id, time, price, type và details.
+
+
+Bước 2: Tạo TicketRepository
+Tiếp theo, tạo TicketRepository interface mở rộng JpaRepository để cung cấp các thao tác với cơ sở dữ liệu cho Ticket Entity.
+
+Bước 3: Tạo TicketService
+Sau đó, tạo TicketService để xử lý logic nghiệp vụ liên quan đến Ticket.
+
+Bước 4: Tạo TicketController
+Tiếp theo, tạo TicketController với các endpoint để xử lý yêu cầu từ người dùng.
+
+Bước 5: Cấu hình Spring Security
+Tiếp theo, cấu hình Spring Security để áp dụng xác thực và phân quyền.
+
+Bước 6: Tạo trang đăng ký và trang đăng nhập
+Tạo các trang HTML Thymeleaf cho việc đăng ký (/register) và đăng nhập (/login). Xử lý việc đăng ký và đăng nhập trong SecurityConfig.
+
+Bước 7: Tạo các trang HTML Thymeleaf
+Tạo các trang HTML Thymeleaf cho danh sách vé, chi tiết vé, tạo vé, cập nhật vé và xóa vé.
+
+Bước 8: Xử lý validation và error handling
+Áp dụng validation và xử lý lỗi trong các trang HTML Thymeleaf.
+
+Bước 9: Kiểm tra hoạt động
+Kiểm tra hoạt động của ứng dụng bằng cách chạy ứng dụng và truy cập các trang theo yêu cầu.
